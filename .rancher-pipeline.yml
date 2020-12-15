@@ -1,0 +1,24 @@
+stages:
+  # debian buster 10版本的上傳與部屬
+  - name: Publish debian buster image
+    steps:
+    - publishImageConfig:
+        dockerfilePath: ./buster_10/Dockerfile
+        buildContext: .
+        tag: china/debian:buster
+        pushRemote: true
+        registry: 10.50.1.63:5443
+      env:
+        PLUGIN_INSECURE: "true"
+
+  #  debian buster 10版本的上傳與部屬
+  - name: Publish debian buster image
+    steps:
+    - publishImageConfig:
+        dockerfilePath: ./buster_10/Dockerfile
+        buildContext: .
+        tag: china/debian:10
+        pushRemote: true
+        registry: 10.50.1.63:5443
+      env:
+        PLUGIN_INSECURE: "true"
