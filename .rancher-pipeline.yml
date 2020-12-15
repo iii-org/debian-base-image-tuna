@@ -12,7 +12,7 @@ stages:
         PLUGIN_INSECURE: "true"
 
   #  debian buster 10版本的上傳與部屬
-  - name: Publish debian buster image
+  - name: Publish debian 10 image
     steps:
     - publishImageConfig:
         dockerfilePath: ./buster_10/Dockerfile
